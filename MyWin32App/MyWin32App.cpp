@@ -8,10 +8,6 @@
 
 
 
-void MyEvent_Callback(BSTR msg)
-{
-
-}
 
 
 int main()
@@ -39,8 +35,6 @@ int main()
     ::SysReleaseString(bstrHello);
     ::SysReleaseString(bstrWorld);
     ::SysReleaseString(bstrResult);
-
-    //pICalc->add_MyEvent((_MyCallbackDele*)MyEvent_Callback);
 
     // Uninitialize COM.
     CoUninitialize();

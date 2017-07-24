@@ -21,7 +21,7 @@ using System.Runtime.InteropServices;
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(true)]
 [assembly: AssemblyDelaySign(false)]
-[assembly: AssemblyKeyFile("..\\..\\MyKeyFile.SNK")]
+[assembly: AssemblyKeyFile("MyKeyFile.SNK")]
 
 
 
