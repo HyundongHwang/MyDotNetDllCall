@@ -32,9 +32,9 @@ int main()
     BSTR bstrResult;
     pICalc->AddStr(bstrHello, bstrWorld, &bstrResult);
     wprintf(L"The result is %s", bstrResult);
-    ::SysReleaseString(bstrHello);
-    ::SysReleaseString(bstrWorld);
-    ::SysReleaseString(bstrResult);
+	::SysFreeString(bstrHello);
+	::SysFreeString(bstrWorld);
+	::SysFreeString(bstrResult);
 
     // Uninitialize COM.
     CoUninitialize();

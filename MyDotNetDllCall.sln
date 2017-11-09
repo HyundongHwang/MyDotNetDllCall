@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26510.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDotNetDll", "MyDotNetDll\MyDotNetDll.csproj", "{3CA86B69-49D0-45B6-92A8-66242A1AB6FE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyWin32App", "MyWin32App\MyWin32App.vcxproj", "{5F002A50-4A4F-43EC-AB3F-702D33382979}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DLLTSET", "DLLTSET\DLLTSET.vcxproj", "{98AC5367-81E2-4A4D-AE33-CD698FAE2D83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,8 +41,19 @@ Global
 		{5F002A50-4A4F-43EC-AB3F-702D33382979}.Release|x64.Build.0 = Release|x64
 		{5F002A50-4A4F-43EC-AB3F-702D33382979}.Release|x86.ActiveCfg = Release|Win32
 		{5F002A50-4A4F-43EC-AB3F-702D33382979}.Release|x86.Build.0 = Release|Win32
+		{98AC5367-81E2-4A4D-AE33-CD698FAE2D83}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{98AC5367-81E2-4A4D-AE33-CD698FAE2D83}.Debug|x64.ActiveCfg = Debug|Win32
+		{98AC5367-81E2-4A4D-AE33-CD698FAE2D83}.Debug|x86.ActiveCfg = Debug|Win32
+		{98AC5367-81E2-4A4D-AE33-CD698FAE2D83}.Debug|x86.Build.0 = Debug|Win32
+		{98AC5367-81E2-4A4D-AE33-CD698FAE2D83}.Release|Any CPU.ActiveCfg = Release|Win32
+		{98AC5367-81E2-4A4D-AE33-CD698FAE2D83}.Release|x64.ActiveCfg = Release|Win32
+		{98AC5367-81E2-4A4D-AE33-CD698FAE2D83}.Release|x86.ActiveCfg = Release|Win32
+		{98AC5367-81E2-4A4D-AE33-CD698FAE2D83}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EB2BD7A-DB1B-4E81-A686-D73ABF79A400}
 	EndGlobalSection
 EndGlobal
