@@ -6,6 +6,8 @@
 #include "Source.h"
 
 
+
+
 int main()
 {
     USES_CONVERSION;
@@ -40,6 +42,7 @@ int main()
 
 	ICallBackFuncPtr  pICb(__uuidof(Win32CallBack));
 	pICb->TestCallback((long)SimapleCallback);
+	pICb->TestCallback2((long)SimapleCallback2);
     CoUninitialize();
     return 0;
 }

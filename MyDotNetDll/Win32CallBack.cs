@@ -9,12 +9,17 @@ namespace MyDotNetDll
 {
     public class Win32CallBack : ICallBackFunc
     {
-        static TestCallbackDelegate del;
-
         public void TestCallback(IntPtr callback)
         {
-            del = Marshal.GetDelegateForFunctionPointer<TestCallbackDelegate>(callback);
+            var del = Marshal.GetDelegateForFunctionPointer<TestCallbackDelegate>(callback);
             del(10);
+        }
+
+        public void TestCallback2(IntPtr callback)
+        {
+            var del = Marshal.GetDelegateForFunctionPointer<TestCallbackDelegate2>(callback);
+            var uniStr = Marshal.StringToCoTaskMemUni("hello world 안녕하세요 123");
+            del(uniStr);
         }
     }
 }
