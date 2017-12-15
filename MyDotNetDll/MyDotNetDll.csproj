@@ -45,9 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ICalculator.cs" />
+    <Compile Include="ICallBackFunc.cs" />
     <Compile Include="ManagedClass.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Win32CallBack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MyKeyFile.SNK" />

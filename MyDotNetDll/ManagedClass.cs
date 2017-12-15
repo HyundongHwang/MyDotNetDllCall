@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace MyDotNetDll
 {
@@ -9,6 +10,7 @@ namespace MyDotNetDll
         public int Add(int Number1, int Number2)
         {
             this.MyEvent?.Invoke($"call Add Number1 : {Number1} Number2 : {Number2}");
+            
             return Number1 + Number2;
         }
 
@@ -18,5 +20,6 @@ namespace MyDotNetDll
             var newStr = str1 + str2;
             return newStr;
         }
+
     }
 }
