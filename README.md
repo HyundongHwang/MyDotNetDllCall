@@ -3,11 +3,11 @@
 <!-- TOC -->
 
 - [MyDotNetDllCall](#mydotnetdllcall)
-    - [소개](#소개)
-    - [구조](#구조)
-    - [개발순서](#개발순서)
-    - [실행](#실행)
-    - [참고자료](#참고자료)
+    - [소개](#%EC%86%8C%EA%B0%9C)
+    - [구조](#%EA%B5%AC%EC%A1%B0)
+    - [개발순서](#%EA%B0%9C%EB%B0%9C%EC%88%9C%EC%84%9C)
+    - [실행](#%EC%8B%A4%ED%96%89)
+    - [참고자료](#%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C)
 
 <!-- /TOC -->
 
@@ -72,23 +72,29 @@ int main()
 
     // Create the interface pointer.
     ICalculatorPtr pICalc(__uuidof(ManagedClass));
-
-    long lResult = 0;
-
+	long lResult = 0;
+	
     // Call the Add method.
     pICalc->Add(5, 10, &lResult);
 
-    wprintf(L"The result is %d", lResult);
+	
+    wprintf(L"The result is %d\n", lResult);
 
     BSTR bstrHello = CString("hello").AllocSysString();
     BSTR bstrWorld = CString("world").AllocSysString();
     BSTR bstrResult;
     pICalc->AddStr(bstrHello, bstrWorld, &bstrResult);
-    wprintf(L"The result is %s", bstrResult);
-    ::SysReleaseString(bstrHello);
-    ::SysReleaseString(bstrWorld);
-    ::SysReleaseString(bstrResult);
 
+    wprintf(L"The result is %s", bstrResult);
+	::SysFreeString(bstrHello);
+	::SysFreeString(bstrWorld);
+	::SysFreeString(bstrResult);
+
+    wprintf(L"The result is %s\n", bstrResult);
+    
+	ICallBackFuncPtr  pICb(__uuidof(Win32CallBack));
+	pICb->TestCallback((long)SimapleCallback);
+    pICb->TestCallback2((long)SimapleCallback2);
     // Uninitialize COM.
     CoUninitialize();
     return 0;
