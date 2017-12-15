@@ -8,6 +8,8 @@ void SimapleCallback(int num)
 
 void SimapleCallback2(wchar_t* wstr)
 {
-	wprintf(L"Call from .net to win32 : %s\n", wstr);
+	CStringW wmsg;
+	wmsg.Format(L"Call from .net to win32 : %s\n", wstr);
+	::MessageBoxW(NULL, wmsg, NULL, MB_OK);
 }
 
