@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MyDotNetDll</RootNamespace>
     <AssemblyName>MyDotNetDll</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +51,12 @@
     <Compile Include="ICallBackFunc.cs" />
     <Compile Include="ManagedClass.cs" />
     <Compile Include="MyClass.cs" />
+    <Compile Include="MyWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyWnd.Designer.cs">
+      <DependentUpon>MyWnd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Win32CallBack.cs" />
   </ItemGroup>

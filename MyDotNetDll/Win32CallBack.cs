@@ -11,15 +11,15 @@ namespace MyDotNetDll
     {
         public void TestCallback(IntPtr callback)
         {
-            var del = Marshal.GetDelegateForFunctionPointer<TestCallbackDelegate>(callback);
-            del(10);
+            var del = Marshal.GetDelegateForFunctionPointer(callback, typeof(TestCallbackDelegate));
+            del.DynamicInvoke(null);
         }
 
         public void TestCallback2(IntPtr callback)
         {
-            var del = Marshal.GetDelegateForFunctionPointer<TestCallbackDelegate2>(callback);
+            var del = Marshal.GetDelegateForFunctionPointer(callback, typeof(TestCallbackDelegate));
             var uniStr = Marshal.StringToCoTaskMemUni("hello world 안녕하세요 123");
-            del(uniStr);
+            del.DynamicInvoke(new[] { uniStr });
         }
     }
 }
